@@ -4,8 +4,8 @@ import AdminPage from "./pages/AdminPage";
 import DocentePage from "./pages/DocentePage";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import "./styles/main.css";
 import "./styles/adminStyles.css";
+import "./styles/main.css";
 import AuthProvider from "./providers/AuthProvider";
 
 const router = createHashRouter([

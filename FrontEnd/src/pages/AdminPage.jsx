@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import AdminMainContent from '../components/AdminMainContent';
 import AdminNavbar from '../components/AdminNavBar';
-import Footer from '../components/Footer';
 
 const AdminPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [activeSection, setActiveSection] = useState('inicio');
   const [docentes, setDocentes] = useState([]); 
+  const [carreras, setCarreras] = useState([]);
   const [estudiantes, setEstudiantes] = useState([]); 
   const [docenteEditando, setDocenteEditando] = useState(null); 
+  const [carreraEditando, setCarreraEditando] = useState(null);
   const [estudianteEditando, setEstudianteEditando] = useState(null); 
 
  
@@ -38,6 +39,19 @@ const AdminPage = () => {
     setDocentes(docentes.filter(d => d.registro !== registro));
   };
 
+  const guardarCarrera = (carrera) => {
+    if (carreraEditando) {
+      setCarreras(carreras.map(c => c.registro === carrera.registro ? carrera : c));
+    } else {
+      setCarreras([...carreras, carrera]);
+    }
+    setCarreraEditando(null);
+  };
+
+  const eliminarCarrera = (registro) => {
+    setCarreras(carreras.filter(c => c.registro !== registro));
+  };
+
   
   const guardarEstudiante = (estudiante) => {
     if (estudianteEditando) {
@@ -63,17 +77,21 @@ const AdminPage = () => {
         isMenuOpen={isMenuOpen}
         toggleMenu={toggleMenu}
         docentes={docentes}
+        carreras={carreras}
         estudiantes={estudiantes}
         docenteEditando={docenteEditando}
+        carreraEditando={carreraEditando}
         estudianteEditando={estudianteEditando}
         guardarDocente={guardarDocente}
-        eliminarDocente={eliminarDocente}
+        guardarCarrera={guardarCarrera}
         guardarEstudiante={guardarEstudiante}
+        eliminarDocente={eliminarDocente}
+        eliminarCarrera={eliminarCarrera}
         eliminarEstudiante={eliminarEstudiante}
         setDocenteEditando={setDocenteEditando}
+        setCarreraEditando={setCarreraEditando}
         setEstudianteEditando={setEstudianteEditando}
       />
-      <Footer />
     </>
   );
 };

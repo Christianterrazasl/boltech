@@ -12,13 +12,14 @@ const Estudiantes = ({
     nombre: '',
     correo: '',
     contrasena: '',
+    telefono: '',
   });
 
   useEffect(() => {
     if (estudianteEditando) {
       setFormData(estudianteEditando);
     } else {
-      setFormData({ registro: '', nombre: '', correo: '', contrasena: '' });
+      setFormData({ registro: '', nombre: '', correo: '', contrasena: '', telefono: '' });
     }
   }, [estudianteEditando]);
 
@@ -30,7 +31,7 @@ const Estudiantes = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     guardarEstudiante(formData); 
-    setFormData({ registro: '', nombre: '', correo: '', contrasena: '' }); 
+    setFormData({ registro: '', nombre: '', correo: '', contrasena: '', telefono: '' }); 
   };
 
   return (
@@ -41,7 +42,7 @@ const Estudiantes = ({
         </div>
         <form onSubmit={handleSubmit}>
           <div className="contenedor-input-formulario">
-            <label htmlFor="registro">Registro</label>
+            <label htmlFor="registro">Registro:</label>
             <input
               type="text"
               id="registro"
@@ -85,6 +86,17 @@ const Estudiantes = ({
             />
           </div>
           <div className="contenedor-input-formulario">
+            <label htmlFor="telefono">Telefono:</label>
+            <input
+              type="phone"
+              id="telefono"
+              name="telefono"
+              value={formData.telefono}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="contenedor-input-formulario">
             <button type="submit">Guardar</button>
           </div>
         </form>
@@ -100,6 +112,7 @@ const Estudiantes = ({
               <td>Nombre Completo</td>
               <td>Correo</td>
               <td>Contraseña</td>
+              <td>Telefono</td>
               <td>Acciones</td>
             </tr>
           </thead>
@@ -110,6 +123,7 @@ const Estudiantes = ({
                 <td>{estudiante.nombre}</td>
                 <td>{estudiante.correo}</td>
                 <td>{estudiante.contrasena}</td>
+                <td>{estudiante.telefono}</td>
                 <td>
                   <button
                     className="btn-editar"

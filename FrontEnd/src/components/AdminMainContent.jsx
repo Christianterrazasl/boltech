@@ -1,6 +1,7 @@
 import React from 'react';
 import Inicio from './AdminInicio';
 import Docentes from './AdminDocentes';
+import Carreras from './AdminCarreras';
 import Estudiantes from './AdminEstudiantes';
 
 const MainContent = ({
@@ -8,14 +9,19 @@ const MainContent = ({
   isMenuOpen,
   toggleMenu,
   docentes,
+  carreras,
   estudiantes,
   docenteEditando,
+  carreraEditando,
   estudianteEditando,
   guardarDocente,
-  eliminarDocente,
+  guardarCarrera,
   guardarEstudiante,
+  eliminarDocente,
+  eliminarCarrera,
   eliminarEstudiante,
   setDocenteEditando,
+  setCarreraEditando,
   setEstudianteEditando,
 }) => {
   return (
@@ -33,6 +39,15 @@ const MainContent = ({
           guardarDocente={guardarDocente}
           eliminarDocente={eliminarDocente}
           setDocenteEditando={setDocenteEditando}
+        />
+      )}
+      {activeSection === 'carreras'  && (
+        <Carreras
+          carreras={carreras}
+          carreraEditando={carreraEditando}
+          guardarCarrera={guardarCarrera}
+          eliminarCarrera={eliminarCarrera}
+          setCarreraEditando={setCarreraEditando}
         />
       )}
       {activeSection === 'estudiantes' && (
