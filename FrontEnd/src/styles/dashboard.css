@@ -1,0 +1,36 @@
+.dashboard {
+  padding: 100px 5% 50px;
+  background-color: #ffc82f;
+  text-align: center;
+}
+
+.dashboard h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.subjects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.subject-card {
+  background-color: #fffbea;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.subject-card:hover {
+  transform: scale(1.05);
+}
+
+.subject-card h3 {
+  cursor: pointer;
+  user-select: none;
+}

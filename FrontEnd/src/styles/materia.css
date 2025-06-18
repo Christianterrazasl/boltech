@@ -1,0 +1,37 @@
+.materia-page {
+  padding: 100px 30px 30px;
+  background-color: #ffc82f;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.materia-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #000;
+  font-weight: bold;
+}
+
+.tareas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tarea-burbuja {
+  background-color: #fff9ce;
+  border: 2px solid #d0a700;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.tarea-burbuja:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #fff3b0;
+}
