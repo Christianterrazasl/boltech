@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import AdminMainContent from '../components/AdminMainContent';
 import AdminNavbar from '../components/AdminNavbar';
-import Footer from '../../../../boltech-v.administrador/FrontEnd/src/components/Footer';
-
+import Footer from '../components/Footer';
 const AdminPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [activeSection, setActiveSection] = useState('inicio');
