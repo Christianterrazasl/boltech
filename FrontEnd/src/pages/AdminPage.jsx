@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import AdminMainContent from '../components/AdminMainContent';
 import AdminNavbar from '../components/AdminNavbar';
 import Footer from '../components/Footer';
+import "../styles/responsive.css";
+
 const AdminPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [activeSection, setActiveSection] = useState('inicio');

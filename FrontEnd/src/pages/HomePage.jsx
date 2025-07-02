@@ -4,6 +4,7 @@ import Courses from '../components/Courses';
 import LifeCoach from '../components/LifeCoach';
 import Footer from '../components/Footer';
 
+
 const HomePage = () => {
   
   return (

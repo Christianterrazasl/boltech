@@ -1,4 +1,5 @@
 import '../styles/life-coach.css';
+import "../styles/responsive.css";
 
 const LifeCoach = () => {
   return (

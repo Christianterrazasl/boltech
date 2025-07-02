@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/HeaderLogged'; 
 import Footer from '../components/Footer';
 import '../styles/dashboard.css';
+import "../styles/responsive.css";
 
 const materias = [
   'Algebra',

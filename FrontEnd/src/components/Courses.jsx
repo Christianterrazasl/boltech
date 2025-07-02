@@ -1,4 +1,5 @@
 import '../styles/course.css';
+import "../styles/responsive.css";
 
 const Courses = () => {
   return (

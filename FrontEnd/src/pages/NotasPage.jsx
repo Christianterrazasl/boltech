@@ -1,6 +1,8 @@
 import Header from '../components/HeaderLogged';
 import Footer from '../components/Footer';
 import '../styles/notas.css';
+import "../styles/responsive.css";
+
 import { useNavigate } from 'react-router-dom';
 const materias = [
   'Álgebra',

@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import '../styles/materia.css';
+import "../styles/responsive.css";
 
 const tareas = [
   'Tarea 1', 'Tarea 2', 'Tarea 3',

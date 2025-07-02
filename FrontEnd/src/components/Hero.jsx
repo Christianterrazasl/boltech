@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/hero.css";
+import "../styles/responsive.css";
 
 const images = [
   "/src/assets/hero1.jpg",
