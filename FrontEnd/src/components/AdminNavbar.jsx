@@ -43,6 +43,14 @@ const Navbar = ({ showSection, isMenuOpen }) => {
           </a>
         </li>
         <li>
+          <a href="#" onClick={(e) => handleClick(e, 'carreras')}>
+            <span className="icon">
+              <ion-icon name="book-outline"></ion-icon>
+            </span>
+            <span className="titulo">Carreras</span>
+          </a>
+        </li>
+        <li>
           <a href="#" onClick={(e) => handleClick(e, 'estudiantes')}>
             <span className="icon">
               <ion-icon name="people-outline"></ion-icon>

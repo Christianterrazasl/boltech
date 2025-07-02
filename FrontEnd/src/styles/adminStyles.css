@@ -208,6 +208,7 @@ body {
 }
 
 #crear-docente-formulario,
+#crear-carrera-formulario,
 #crear-estudiante-formulario {
   display: flex;
   flex-direction: column;
@@ -248,7 +249,7 @@ body {
 }
 
 .detalles .formulario,
-.detalles .historial-docentes, .historial-estudiantes {
+.detalles .historial-docentes, .historial-estudiantes, .historial-carreras {
   position: relative;
   display: grid;
   min-height: auto;
@@ -259,11 +260,11 @@ body {
   width: 100%;
 }
 
-.formulario-titulo, .historial-titulo-docentes, .historial-titulo-estudiantes {
+.formulario-titulo, .historial-titulo-docentes, .historial-titulo-estudiantes, .historial-titulo-carreras {
   margin-bottom: 20px;
 }
 
-.formulario-titulo h2, .historial-titulo-docentes h2, .historial-titulo-estudiantes h2 {
+.formulario-titulo h2, .historial-titulo-docentes h2, .historial-titulo-estudiantes h2, .historial-titulo-carreras h2 {
   font-weight: 600;
   color: var(--blue);
 }
@@ -279,23 +280,27 @@ body {
 }
 
 .detalles .historial-estudiantes table tr td, 
-.detalles .historial-docentes table tr td {
+.detalles .historial-docentes table tr td,
+.detalles .historial-carreras table tr td {
   color: var(--black1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .detalles .historial-estudiantes table tr td:last-child, 
-.detalles .historial-docentes table tr td:last-child {
+.detalles .historial-docentes table tr td:last-child,
+.detalles .historial-carreras table tr td:last-child {
   border-bottom: none;
 }
 
 .detalles .historial-estudiantes table tr td:first-child, 
-.detalles .historial-docentes table tr td:first-child {
+.detalles .historial-docentes table tr td:first-child,
+.detalles .historial-carreras table tr td:first-child {
   padding: 15px;
 }
 
 .detalles .historial-estudiantes table tr td:last-child, 
-.detalles .historial-docentes table tr td:last-child {
+.detalles .historial-docentes table tr td:last-child,
+.detalles .historial-carreras table tr td:last-child {
   text-align: end;
 }
 
@@ -345,33 +350,39 @@ body {
   }
 
   .historial-docentes,
-  .historial-estudiantes {
+  .historial-estudiantes,
+  .historial-carreras {
     overflow-x: auto; 
   }
 
   .historial-docentes table,
-  .historial-estudiantes table {
+  .historial-estudiantes table,
+  .historial-carreras table {
     width: 100%;
     min-width: 600px; 
   }
 
   .historial-docentes table thead,
-  .historial-estudiantes table thead {
+  .historial-estudiantes table thead,
+  .historial-carreras table thead {
     display: table-header-group; 
   }
 
   .historial-docentes table tbody,
-  .historial-estudiantes table tbody {
+  .historial-estudiantes table tbody,
+  .historial-carreras table tbody {
     display: table-row-group; 
   }
 
   .historial-docentes table tr,
-  .historial-estudiantes table tr {
+  .historial-estudiantes table tr,
+  .historial-carreras table tr {
     display: table-row; 
   }
 
   .historial-docentes table td,
-  .historial-estudiantes table td {
+  .historial-estudiantes table td,
+  .historial-carreras table td {
     display: table-cell; 
     padding: 10px; 
   }
@@ -382,17 +393,20 @@ body {
     grid-template-columns: 1fr;
   }
   .historial-docentes,
-  .historial-estudiantes {
+  .historial-estudiantes,
+  .historial-carreras {
     padding: 10px; 
   }
 
   .historial-docentes table,
-  .historial-estudiantes table {
+  .historial-estudiantes table,
+  .historial-carreras table {
     min-width: 100%;
   }
 
   .historial-docentes table td,
-  .historial-estudiantes table td {
+  .historial-estudiantes table td,
+  .historial-carreras table td {
     padding: 8px; 
   }
 
@@ -432,12 +446,14 @@ body {
   }
 
   .historial-docentes,
-  .historial-estudiantes {
+  .historial-estudiantes,
+  .historial-carreras {
     padding: 5px; 
   }
 
   .historial-docentes table td,
-  .historial-estudiantes table td {
+  .historial-estudiantes table td,
+  .historial-carreras table td {
     padding: 5px; 
   }
 
